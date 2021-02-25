@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Homepage</title>
 </head>
 
 <body>
@@ -23,29 +23,25 @@
         <div class="uk-navbar-left">
 
             <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li>
-                    <a href="#">Parent</a>
-                    <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li class="uk-active"><a href="#">Active</a></li>
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Item</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#">Item</a></li>
+                <li class="uk-active"><a href="#">Home</a></li>
+                <li class="uk-navbar-active"><a href="#">Visited</a></li>
+                <li class="uk-navbar-active"><a href="#">Last Search</a></li>
             </ul>
 
         </div>
     </nav>
 
-    <form class="uk-form-stacked">
+    <div class="uk-card uk-card-default .uk-align-center uk-card-body uk-width-1-2@m">
+        <h3 class="uk-card-title">Leave a review from your last visit!</h3>
+        <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
 
+    <form class="uk-form-stacked" id="submit">
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text"></label>
             <div class="uk-form-controls">
                 <input class="uk-input" id="form-stacked-text" type="text" placeholder="Search City">
+                <input class="uk-input" id="form-stacked-text" type="submit">
             </div>
         </div>
     </form>
