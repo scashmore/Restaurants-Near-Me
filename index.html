@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/style.css">
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
+        <div class="uk-navbar-left">
+    
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li>
+                    <a href="#">Parent</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Item</a></li>
+            </ul>
+    
+        </div>
+    </nav>
+
+    <form class="uk-form-stacked">
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-stacked-text"></label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="form-stacked-text" type="text" placeholder="Search City">
+            </div>
+        </div>
+    </form>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
