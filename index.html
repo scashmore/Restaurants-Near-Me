@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/style.css">
-    <title>Document</title>
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/uikit-icons.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/uikit.min.css" />
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Homepage</title>
 </head>
+
 <body>
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
+        <div class="uk-navbar-left">
+
+            <ul class="navbg uk-navbar-nav">
+                <li class="uk-active"><a href="#">Home</a></li>
+                <li class="uk-navbar-active"><a href="#">Visited</a></li>
+                <li class="uk-navbar-active"><a href="#">Cooked</a></li>
+                <li class="uk-navbar-active"><a href="#">Last Search</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <section class="uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
+        <div class="card uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Leave a review from your last visit!</h3>
+            <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="card uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Leave a review of your last recipe!!</h3>
+            <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+    <section  class="subbtns">
+    <button class="btn form uk-button uk-button-default" type="button">Going Out</button>
+    <div class="drop uk-width-large" uk-dropdown>
+        <form class="uk-form-stacked" id="submitCity">
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text"></label>
+                <div class="uk-form-controls">
+                    <input class="btn uk-input" id="zipCode" type="text" placeholder="Search City">
+                    <input class="btn uk-input" id="stayIn type="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <button class="btn form uk-button uk-button-default" type="button">Staying In</button>
+    <div class="drop uk-width-large" uk-dropdown>
+        <form class="uk-form-stacked" id="submitRecipe">
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text"></label>
+                <div class="uk-form-controls">
+                    <input class="btn uk-input" type="submit" value="Look for Recipie">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+    
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

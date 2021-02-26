@@ -1,1 +1,69 @@
 /* css */
+:root {
+    --main-bg-color: #464e47;
+    --main-card-color: #96E6b3;
+    --main-button-color: #ccfccb;
+    --main-text-color: #f1fffa;
+    --hover-color: #568259;
+}
+body{
+    background-color: var(--main-bg-color);
+    min-height: 100vh;
+}
+.navbg {
+    background-color: var(--main-button-color);
+    width: 100vw;
+}
+.card {
+    display: flex;
+    background-color: var(--main-card-color);
+    color: var(--main-text-color);
+    width: 100vw;
+}
+.uk-grid {
+    margin-left: 0;
+}
+h3 {
+    color: var(--main-text-color);
+}
+.btn {
+    background-color: var(--main-button-color);
+    margin: 1%;
+}
+.btn:hover {
+    background-color: var(--hover-color);
+    color: var(--main-text-color);
+}
+.btn:hover::after {
+    background-color: var(--main-button-color);
+}
+.drop {
+    background-color: var(--main-card-color);
+    border-radius: 1%;
+    border-color: var(--hover-color);
+    border-style: solid;
+}
+.uk-dropdown.uk-open {
+    left: 0 !important;
+}
+.form {
+    margin-bottom: 5%;
+}
+.subbtns {
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 600px) {
+    section {
+        flex-direction: column;
+        justify-content: center;
+    };
+    .card {
+        margin: 0;
+    }
+}
+@media (min-width: 640px) {
+    .uk-child-width-expand\@s>:not([class*=uk-width]) {
+        margin: 1%;
+    }
+}
