@@ -22,7 +22,7 @@
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
         <div class="uk-navbar-left">
 
-            <ul class="uk-navbar-nav">
+            <ul class="navbg uk-navbar-nav">
                 <li class="uk-active"><a href="#">Home</a></li>
                 <li class="uk-navbar-active"><a href="#">Visited</a></li>
                 <li class="uk-navbar-active"><a href="#">Cooked</a></li>
@@ -32,41 +32,43 @@
         </div>
     </nav>
     <section class="uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
-        <div class="uk-card uk-card-default uk-card-body">
+        <div class="card uk-card uk-card-default uk-card-body">
             <h3 class="uk-card-title">Leave a review from your last visit!</h3>
             <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua.</p>
         </div>
 
-        <div class="uk-card uk-card-default uk-card-body">
+        <div class="card uk-card uk-card-default uk-card-body">
             <h3 class="uk-card-title">Leave a review of your last recipe!!</h3>
             <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua.</p>
         </div>
     </section>
-    <button class="uk-button uk-button-default" type="button">Going Out</button>
-    <div class="uk-width-large" uk-dropdown>
+    <section  class="subbtns">
+    <button class="btn form uk-button uk-button-default" type="button">Going Out</button>
+    <div class="drop uk-width-large" uk-dropdown>
         <form class="uk-form-stacked" id="submitCity">
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" type="text" placeholder="Search City">
-                    <input class="uk-input" id="form-stacked-text" type="submit">
+                    <input class="btn uk-input" id="form-stacked-text" type="text" placeholder="Search City">
+                    <input class="btn uk-input" id="form-stacked-text" type="submit">
                 </div>
             </div>
         </form>
     </div>
-    <button class="uk-button uk-button-default" type="button">Staying In</button>
-    <div class="uk-width-large" uk-dropdown>
+    <button class="btn form uk-button uk-button-default" type="button">Staying In</button>
+    <div class="drop uk-width-large" uk-dropdown>
         <form class="uk-form-stacked" id="submitRecipe">
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text"></label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" type="submit" value="Look for Recipie">
+                    <input class="btn uk-input" id="form-stacked-text" type="submit" value="Look for Recipie">
                 </div>
             </div>
         </form>
     </div>
+</section>
     
     <script src="assets/js/script.js"></script>
 </body>
