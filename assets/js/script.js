@@ -1,85 +1,27 @@
-//js
-var getRest = function(city) {
-   
-    fetch("https://documenu.p.rapidapi.com/restaurants/zip_code/" + city + "?size=100&fullmenu=false", {
-	"method": "GET",
-	"headers": {
-		"x-api-key": "e9fe0dd92c9b93bedf0eff314991856e",
-		"x-rapidapi-key": "88e1447b5fmsh82bcb1516d4eca7p18ca6bjsn49a0d0de2e35",
-		"x-rapidapi-host": "documenu.p.rapidapi.com"
-	}
-})
-        .then(function(response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    console.log(data);
-                   
-                });
-            }
-        })
-        .catch(function(error) {})
-    
-};
-
-// getRest();
-
-var getRecipe = function () {
-    
-    fetch("https://www.themealdb.com/api/json/v1/1/random.php")
-        .then(function(response) {
-            if (response.ok) {
-                response.json().then(function(data) {
-                    console.log(data)
-                    recipePrint(data);
-                })
-            }
-        })
-};
-
-// getRecipe();
-
-var recipePrint = function(data) {
-    var name = data.meals[0].strMeal;
-    var image = data.meals[0].strMealThumb;
-    var instruct = data.meals[0].strInstructions;
-    var ingredientArr = [];
-    for (var i = 1; i < 21; i++) {
-        if (data.meals[0]["strIngredient"+i] !== "") {
-            ingredientArr.push(data.meals[0]["strIngredient"+i]);
-        } else {
-            return;
-        }
-    }
-    console.log(ingredientArr);
-}
-
-var visitedRestPage = function() {
-    var visitedRest = localStorage.getItem('restaurants')
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
 // html page 1 buttons
+//Need help here tried many different ways, can't push to the array we create the first time because it's just numbers
 $('#submitCity').submit( function(event) {
     event.preventDefault();
-    var city = $('#zipCode').val();
+    var city = "" + ($('#zipCode').val());
+    var pullLocal = localStorage.getItem('restZip');
+    var blankArr = [];
     console.log(city);
-    getRest(city);
+    if (pullLocal !== null) {
+        var restZipParse = JSON.parse(localStorage.getItem('restZip'));
+        blankArr.push(restZipParse);
+        restZipParse.push(city);
+        localStorage.setItem('restZip', JSON.stringify(restZipParse));
+        console.log(JSON.parse(localStorage.getItem('restZip')))
+    } else {
+        blankArr.push(city);
+        localStorage.setItem('restZip', city);
+    }
+    // window.location.href = "page3.html";
 });
 $('#submitRecipe').submit( function(event) {
     event.preventDefault();
-    getRecipe();
+    window.location.href = "page4.html";
 });
 $('#submitRate').on('click', function() {
-    localStorage.unshift($(this).attr('id'), $(this).prev().val())
+    localStorage.unshift($(this).attr('id'), $(this).prev().val());
 });
