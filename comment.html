@@ -13,7 +13,8 @@
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="comment.css">
     <title>Document</title>
 </head>
 <body>
@@ -62,20 +63,33 @@
     </div>
     <div class="uk-margin">
         <input class="uk-input uk-form-width-large" type="text" placeholder="Comment">
-</div>
+    </div>
         
     </form>
     
-  <div id="rates">
-      <h2>Rates</h2>
-      <button class="uk-button uk-button-default">1 Star</button>
-      <button class="uk-button uk-button-default">2 Star</button>
-      <button class="uk-button uk-button-default">3 Star</button>
-      <button class="uk-button uk-button-default">4 Star</button>
-      <button class="uk-button uk-button-default">5 Star</button>
-  </div>
-      
+    
+    <div class="stars">
+        <form action="">
+          <input class="star star-5" id="star-5" type="radio" name="star"/>
+          <label class="star star-5" for="star-5"></label>
+          <input class="star star-4" id="star-4" type="radio" name="star"/>
+          <label class="star star-4" for="star-4"></label>
+          <input class="star star-3" id="star-3" type="radio" name="star"/>
+          <label class="star star-3" for="star-3"></label>
+          <input class="star star-2" id="star-2" type="radio" name="star"/>
+          <label class="star star-2" for="star-2"></label>
+          <input class="star star-1" id="star-1" type="radio" name="star"/>
+          <label class="star star-1" for="star-1"></label>
+        </form>
+    </div>
+ <!-- sumbit button -->
+    <div id="submit">
+        <p uk-margin>
+            <button id="not-visited" class="uk-button uk-button-default uk-button-small">Submit</button>
+        </p>
+    </div>
+     
 
- <script src="page2.js"></script>   
+  <script src="page2.js"></script>   
 </body>
 </html>

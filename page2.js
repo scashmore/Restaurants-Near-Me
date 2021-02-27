@@ -1,20 +1,21 @@
-var visitedEl = $('#visited');
-var notVisitedEl = $('#not-visited');
-var cookedEl = $('#cooked');
-var notCookedEl = $('#not-cooked');
+// var visitedEl = $("#visited");
+// var notVisitedEl = $("#not-visited");
+// var cookedEl = $("#cooked");
+// var notCookedEl = $("#not-cooked");
+// var starEl = $(".stars");
+// var submitEl = $("#submit");
 
+$("#submit").submit(function (event) {
+  event.preventDefault();
+  console.log(submitEl);
+});
 
+// $('#submitRecipe').submit( function(event) {
+//     event.preventDefault();
+//     getRecipe();
+// });
 
-
-
-visitedEl.on('click', function () {
-    console.log("its clicked")
-}
-notVisitedEl.on('click', function () {}
-cookedEl.on('click', function () {}
-notCookedEl.on('click', function () {}
-
-
-
-
-
+// notVisitedEl.on('click', function () {},
+// cookedEl.on('click', function () {},
+// notCookedEl.on('click', function () {},
+// };
