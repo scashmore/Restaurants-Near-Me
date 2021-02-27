@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
-    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="assets/css/uikit.min.css" />
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/css/uikit.min.css" />
-    
+
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Menu- Returned Search</title>
-    
+
 </head>
+
 <body>
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
         <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
+
+            <ul class="navbg uk-navbar-nav">
                 <li class="uk-active"><a href="#">Home</a></li>
                 <li class="uk-navbar-active"><a href="#">Visited</a></li>
                 <li class="uk-navbar-active"><a href="#">Cooked</a></li>
                 <li class="uk-navbar-active"><a href="#">Last Search</a></li>
             </ul>
+
         </div>
     </nav>
 
-Search Results
-<ul class="uk-list" id=result>
-    <li></li>
-</ul>
+    Search Results
+    <ul class="card uk-list" id="result">
+        <li></li>
+    </ul>
 
-<div class="uk-card uk-card-default" id="image">
-    <div class="uk-card-media-top">
-        <img src="" alt="">
+    <div class="card image uk-card uk-card-default" id="image">
+        <div class="uk-card-media-top">
+            <img src="" alt="">
+        </div>
+        <div class="uk-card-body"></div>
     </div>
-    <div class="uk-card-body"></div>
-</div>
+
+    <div class="card uk-card-body">
+        <a class="uk-link" href="#">Directions</a>
+    </div>
 
 
-<div class="uk-card-body">
-<a class="uk-link" href="#">Directions</a>
-</div>
+    <div class="container" id="container">
+        <a class="btn uk-button uk-button-default" href="#modal-center" uk-toggle>Menu/Recipie</a>
 
+        <div id="modal-center" class="uk-flex-top" uk-modal>
+            <div class="drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 
-<button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" id="goingBtn">Going</button>
-<button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" id="notGoingBtn">Not Going</button>
+                <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
 
+                <p class="uk-overflow-container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<div id="container">
-    <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Open</a>
-
-    <div id="modal-center" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-    
-            <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
-    
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    
+            </div>
         </div>
     </div>
-</div>
-    
+    <section  class="subbtns">
+    <button class="btn uk-button uk-button-default" id="goingBtn">Going</button>
+    <button class="btn uk-button uk-button-default" id="notGoingBtn">Not
+        Going</button>
+    </section>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
