@@ -5,7 +5,6 @@ $('#submitCity').submit( function(event) {
     var city = "" + ($('#zipCode').val());
     var pullLocal = localStorage.getItem('restZip');
     var restZipParse = JSON.parse(localStorage.getItem('restZip'));
-    var blankArr = [];
     console.log(city);
     if (pullLocal === null) {
         var firstObj = new Object();
