@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,82 +15,82 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="comment.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/comment.css">
+    <title>Resturant Comments</title>
 </head>
+
 <body>
     <!-- add nav bar -->
-    <nav class="uk-navbar-container uk-margin " uk-navbar="mode: click">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
         <div class="uk-navbar-left">
 
-            <ul class="uk-navbar-nav">
+            <ul class="navbg uk-navbar-nav">
                 <li class="uk-active"><a href="#">Home</a></li>
                 <li class="uk-navbar-active"><a href="#">Visited</a></li>
+                <li class="uk-navbar-active"><a href="#">Cooked</a></li>
                 <li class="uk-navbar-active"><a href="#">Last Search</a></li>
             </ul>
 
         </div>
     </nav>
     <div>
-        <p uk-margin>
-            <button id="visited"class="uk-button uk-button-default uk-button-small">Visited</button>
-        </p>
-        <p uk-margin>
-            <button id="not-visited" class="uk-button uk-button-default uk-button-small">Not Visited</button>
-        </p>
+        <ul class="toggle" uk-tab ku-switcher>
+            <li class="uk-active"><a href="#">Visited Restaurant</a></li>
+            <li><a href="#">Cooked Recipies</a></li>
+        </ul>
+        <ul class="uk-switcher uk-margin">
+            <li>
+                <section class="card uk-margin">
+                    <h2>Comments Restaurant</h2>
+                    <form class="textinput">
+                        <textarea row="5" class="uk-input" type="text"
+                            placeholder="Comments"></textarea>
+            
+            
+                        <div class="stars" action="">
+                            <input class="star star-5" id="star-5" type="radio" name="star" />
+                            <label class="star star-5" for="star-5"></label>
+                            <input class="star star-4" id="star-4" type="radio" name="star" />
+                            <label class="star star-4" for="star-4"></label>
+                            <input class="star star-3" id="star-3" type="radio" name="star" />
+                            <label class="star star-3" for="star-3"></label>
+                            <input class="star star-2" id="star-2" type="radio" name="star" />
+                            <label class="star star-2" for="star-2"></label>
+                            <input class="star star-1" id="star-1" type="radio" name="star" />
+                            <label class="star star-1" for="star-1"></label>
+                        </div>
+                        <button id="submit" class="btn uk-button uk-button-default">Submit</button>
+                    </form>
+                </section>
+            </li>
+            <li>
+                <section class="card uk-margin">
+                    <h2>Comments Recipie</h2>
+                    <form class="textinput">
+                        <textarea row="5" class="uk-input" type="text"
+                            placeholder="Comments"></textarea>
+            
+            
+                        <div class="stars" action="">
+                            <input class="star star-5" id="star-5" type="radio" name="star" />
+                            <label class="star star-5" for="star-5"></label>
+                            <input class="star star-4" id="star-4" type="radio" name="star" />
+                            <label class="star star-4" for="star-4"></label>
+                            <input class="star star-3" id="star-3" type="radio" name="star" />
+                            <label class="star star-3" for="star-3"></label>
+                            <input class="star star-2" id="star-2" type="radio" name="star" />
+                            <label class="star star-2" for="star-2"></label>
+                            <input class="star star-1" id="star-1" type="radio" name="star" />
+                            <label class="star star-1" for="star-1"></label>
+                        </div>
+                        <button id="submit" class="btn uk-button uk-button-default">Submit</button>
+                    </form>
+                </section>
+            </li>
+            </ul>
     </div>
-    <div>
-        <p uk-margin>
-            <button id="cooked" class="uk-button uk-button-default uk-button-small">Cooked</button>
-        </p>
-        <p uk-margin>
-            <button id="not-cooked" class="uk-button uk-button-default uk-button-small">Not Cooked</button>
-        </p>
-    </div>
-    
-
-    <h2>Comments</h2>
-    <form>
-
-        <div class="uk-margin">
-            <input class="uk-input uk-form-width-large" type="text" placeholder="Comment">
-        </div>
-
-        <div class="uk-margin">
-                <input class="uk-input uk-form-width-large" type="text" placeholder="Comment">
-        </div>
-        <div class="uk-margin">
-            <input class="uk-input uk-form-width-large" type="text" placeholder="Comment">
-    </div>
-    <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="Comment">
-    </div>
-        
-    </form>
-    
-    
-    <div class="stars">
-        <form action="">
-          <input class="star star-5" id="star-5" type="radio" name="star"/>
-          <label class="star star-5" for="star-5"></label>
-          <input class="star star-4" id="star-4" type="radio" name="star"/>
-          <label class="star star-4" for="star-4"></label>
-          <input class="star star-3" id="star-3" type="radio" name="star"/>
-          <label class="star star-3" for="star-3"></label>
-          <input class="star star-2" id="star-2" type="radio" name="star"/>
-          <label class="star star-2" for="star-2"></label>
-          <input class="star star-1" id="star-1" type="radio" name="star"/>
-          <label class="star star-1" for="star-1"></label>
-        </form>
-    </div>
- <!-- sumbit button -->
-    <div id="submit">
-        <p uk-margin>
-            <button id="not-visited" class="uk-button uk-button-default uk-button-small">Submit</button>
-        </p>
-    </div>
-     
-
-  <script src="page2.js"></script>   
+    <script src="page2.js"></script>
 </body>
+
 </html>

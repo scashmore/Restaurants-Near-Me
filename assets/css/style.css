@@ -60,6 +60,36 @@ h3 {
     display: flex;
     justify-content: center;
 }
+.textinput {
+    margin: 3%;
+}
+h2 {
+    margin: 3%;
+}
+.uk-tab>.uk-active>a {
+    color: var(--hover-color);
+    border-style: solid;
+    border-color: var(--hover-color);
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%; 
+    border-bottom: none; 
+    
+}
+.uk-tab>*>a {
+    color: var(--main-text-color);
+    border-style: solid;
+    border-color: var(--hover-color);
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom: none;   
+}
+.uk-navbar-nav>li.uk-active>a {
+    color: var(--main-text-color);
+}
+.uk-navbar-nav>li>a {
+    color: var(--main-text-color);
+    text-shadow: 2px 2px 2px var(--main-bg-color);
+}
 @media screen and (max-width: 600px) {
     section {
         flex-direction: column;
