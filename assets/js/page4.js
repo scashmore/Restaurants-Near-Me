@@ -29,13 +29,13 @@ var recipePrint = function(data) {
     console.log(ingredientArr);
     newDiv.text(name);
     newDiv.attr('class', 'DIV CLASS HERE');
-    $('#results').append(nedDiv);
+    $('#results').append(newDiv);
     newDiv.text(image);
     newDiv.attr('class', 'DIV CLASS HERE');
-    $('#results').append(nedDiv);
+    $('#results').append(newDiv);
     newDiv.text(instruct);
     newDiv.attr('class', 'DIV CLASS HERE');
-    $('#results').append(nedDiv);
+    $('#results').append(newDiv);
 };
 
 var visitedRestPage = function() {
