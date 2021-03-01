@@ -43,12 +43,19 @@ var writeRest = function (rests, randomRest) {
     var name = picked.restaurant_name;
     var address = picked.address.formatted;
     var restId = picked.restaurant_id;
+    var lat = picked.geo.lat;
+    var long = picked.geo.lon;
     var menu = picked.menus[0]["menu_sections"];
+    console.log(lat);
+    console.log(long);
     console.log(menu);
+    maps(lat, long);
     $('#result').append('<div id="restName">' + name + '</div>');
     $('#result').append('<div id="restAddress">' + address + '</div>');
     // Make this not dipslay, will pull from to save id to local storage for review page
     $('#result').append('<div id="restId" data-restID="' + restId + '"></div>');
+    $('#result').append('<div id="lat" data-lat="' + lat + '"></div>');
+    $('#result').append('<div id="lon" data-lon="' + long + '"></div>');
     for (var i = 0; i < menu.length; i++) {
         var sectionName = menu["" + i]["section_name"];
         var sectionDisc = menu["" + i]["description"];
@@ -108,7 +115,9 @@ $('#goingBtn').on('click', function (event) {
 
 //open maps
 
-function maps() {
+function maps(lat, long) {
+    var lat = $('#lat').attr("data-lat");
+    var long = $('#lon').attr("data-lon");
     if /*for iOS*/
       ((navigator.platform.indexOf("iPhone") != -1) || 
        (navigator.platform.indexOf("iPod") != -1) || 
