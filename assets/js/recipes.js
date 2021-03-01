@@ -78,6 +78,6 @@ function loadRecipe() {
     myVar = setTimeout(showPageR, 6400);
   };
   function showPageR() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("pageRecipe").style.display = "block";
+    $("#loader").css("display", "none");
+    $("#pageRecipe").css("display", "block");
   }
