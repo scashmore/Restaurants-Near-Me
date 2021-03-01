@@ -36,48 +36,21 @@ var recipePrint = function(data) {
     $('#recipePrint').append('<div class="dishName">' + instruct + '</div>');
 };
 
-var visitedmealPage = function() {
-    var visitedmeal = localStorage.getItem('mealaurants');
-
-};
-
 getRecipe();
 
 $('#save').on('click', function () {
     var meal = $('#result').text();
     var mealId = $('#mealId').attr("data-mealId");
-    var pullLocal = localStorage.getItem('savedMeals');
-    var edited = JSON.parse(pullLocal);
-    if (pullLocal === null) {
-        var firstObj = new Object();
-        firstObj[meal] = mealId;
-        localStorage.setItem('savedMeals', JSON.stringify(firstObj));
-        console.log(JSON.stringify(firstObj));
-    } else if (Object.keys(edited).length === 1) {
-        var firstName = Object.keys(edited)[0];
-        var firstId = edited[Object.keys(edited)[0]];
-        var newObj = new Object();
-        newObj[meal] = mealId;
-        newObj[firstName] = firstId;
-        localStorage.setItem('savedMeals', JSON.stringify(newObj));
-    } else {
-        var current = JSON.parse(localStorage.getItem('savedMeals'));
-        current[meal] = mealId;
-        localStorage.setItem('savedMeals', JSON.stringify(current));
-        console.log(JSON.parse(localStorage.getItem('savedMeals')));
-    }
-})
+    var pullLocal = JSON.parse(localStorage.getItem('savedMeals')) || {};
+    pullLocal[mealId]= {
+        name: meal,
+        comment: "",
+        rating: "",
+    };
+    pullLocal.last = mealId;
+    localStorage.setItem('savedMeals', JSON.stringify(pullLocal));
+});
 
 $('#getNew').on('click', function() {
     window.location.reload();
-})
-
-//page loader
-
-function loadRecipe() {
-    myVar = setTimeout(showPageR, 6400);
-  };
-  function showPageR() {
-    $("#loader").css("display", "none");
-    $("#pageRecipe").css("display", "block");
-  }
+});
