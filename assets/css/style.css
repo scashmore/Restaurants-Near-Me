@@ -1,1 +1,155 @@
 /* css */
+:root {
+    --main-bg-color: #464e47;
+    --main-card-color: #96E6b3;
+    --main-button-color: #ccfccb;
+    --main-text-color: #f1fffa;
+    --hover-color: #568259;
+}
+body{
+    background-color: var(--main-bg-color);
+    min-height: 100vh;
+}
+.navbg {
+    background-color: var(--main-button-color);
+    width: 100vw;
+}
+.card {
+    display: flex;
+    background-color: var(--main-card-color);
+}
+.uk-grid {
+    margin-left: 0;
+}
+h3 {
+    color: var(--main-text-color);
+}
+.btn {
+    background-color: var(--main-button-color);
+    margin: 1%;
+}
+.btn:hover {
+    background-color: var(--hover-color);
+    color: var(--main-text-color);
+}
+.btn:hover::after {
+    background-color: var(--main-button-color);
+}
+.drop {
+    background-color: var(--main-card-color);
+    border-radius: 1%;
+    border-color: var(--hover-color);
+    border-style: solid;
+}
+.uk-dropdown.uk-open {
+    left: 0 !important;
+}
+.form {
+    margin-bottom: 5%;
+}
+.subbtns {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0 0 0;
+}
+.image {
+    margin-bottom: 3%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.textinput {
+    margin: 3%;
+}
+h2 {
+    margin: 3%;
+    color: var(--main-text-color);
+}
+#results {
+    padding: 15%;
+}
+/* Toggle bar */
+.uk-tab>.uk-active>a {
+    color: var(--hover-color);
+    border-style: solid;
+    border-color: var(--hover-color);
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%; 
+    border-bottom: none; 
+    
+}
+.uk-tab>*>a {
+    color: var(--main-text-color);
+    border-style: solid;
+    border-color: var(--hover-color);
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom: none;   
+}
+/* Navigation bar */
+.uk-navbar-nav>li.uk-active>a {
+    color: var(--main-text-color);
+}
+.uk-navbar-nav>li>a {
+    color: var(--main-text-color);
+    text-shadow: 2px 2px 2px var(--main-bg-color);
+}
+/* Search Result Style */
+#restName {
+    font-size: 30px;
+    margin-right: 2%;
+    margin-bottom: 5%;
+}
+#restAddress {
+    font-size: 20px
+}
+.recipename {
+    font-size: 30px;
+    padding: 10%;
+}
+.directions {
+    padding: 20%;
+    font-size: 17px;
+}
+/* Modal Styles */
+.sectionName {
+    font-size: 30px;
+    font-weight: bold;
+}
+.sectionDisc {
+    font-size: 20px;
+}
+.dishName{
+    font-size: 20px;
+    font-weight: bold;
+}
+.dishDisc {
+    font-size: 15px;
+}
+/* Comment Styles */
+#restPrint {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3%;
+}
+/* Media size adjustments */
+
+@media screen and (max-width: 600px) {
+    section {
+        flex-direction: column;
+        justify-content: center;
+    };
+    .card {
+        margin: 0;
+    }
+    img { 
+        width: 300px;
+        height: 300px;
+      }
+}
+@media (min-width: 640px) {
+    .uk-child-width-expand\@s>:not([class*=uk-width]) {
+        margin: 1%;
+    }
+}

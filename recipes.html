@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="assets/css/uikit.min.css" />
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/css/uikit.min.css" />
-
-    <!-- UIkit JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Menu- Returned Search</title>
+    <title>Recipe- Returned Search</title>
 
 </head>
 
@@ -32,43 +31,36 @@
 
         </div>
     </nav>
-    <ul class="card uk-list" id="result" style="flex-direction: column; padding: 10%;">
+    <ul class="card uk-list recipename" id="result" style="flex-direction: column; padding: 10%;">
         <li></li>
     </ul>
-<!-- 
 
 
-    <div class="card image uk-card uk-card-default" id="image">
+    <div class="card image uk-card uk-card-default" style="flex-direction: column; padding: 20%">
         <div class="uk-card-media-top">
-            <img src="" alt="">
+            <img id="image" src="" alt="">
         </div>
         <div class="uk-card-body"></div>
-    </div> -->
-
-
-    <div class="card uk-card-body directions">
-        <a class="uk-link maplink" id="maps">Click for Directions in Maps</a>
     </div>
 
-
     <div class="container" id="container">
-        <a class="btn uk-button uk-button-default" href="#modal-center" uk-toggle>Menu</a>
+        <a class="btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
 
         <div id="modal-center" class="uk-flex-top" uk-modal>
             <div class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
 
                 <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
 
-                <div id="menuPrint"></div>
+                <div id="recipePrint"></div>
+
             </div>
         </div>
     </div>
     <section  class="subbtns">
-    <button class="btn uk-button uk-button-default" id="goingBtn">Going</button>
-    <button class="btn uk-button uk-button-default" id="notGoingBtn">Not
-        Going</button>
+    <button class="btn uk-button uk-button-default" id="save">Save</button>
+    <button class="btn uk-button uk-button-default" id="getNew">Get New Recipe</button>
     </section>
-    <script src="assets/js/menuindex.js"></script>
+    <script src="assets/js/recipes.js"></script>
 </body>
 
 </html>
