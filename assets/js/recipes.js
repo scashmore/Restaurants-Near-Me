@@ -71,3 +71,13 @@ $('#save').on('click', function () {
 $('#getNew').on('click', function() {
     window.location.reload();
 })
+
+//page loader
+
+function loadRecipe() {
+    myVar = setTimeout(showPageR, 6400);
+  };
+  function showPageR() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("pageRecipe").style.display = "block";
+  }
