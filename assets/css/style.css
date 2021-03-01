@@ -50,7 +50,7 @@ h3 {
 .subbtns {
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 5% 0 0 0;
 }
 .image {
     margin-bottom: 3%;
@@ -107,6 +107,10 @@ h2 {
 .recipename {
     font-size: 30px;
     padding: 10%;
+}
+.directions {
+    padding: 20%;
+    font-size: 17px;
 }
 /* Modal Styles */
 .sectionName {
