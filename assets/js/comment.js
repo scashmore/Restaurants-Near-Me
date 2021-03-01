@@ -45,6 +45,26 @@ var mostRecent = function (recentRestId) {
         </form>
     </section>`
         $('#allRestPrint').append(inputCard);
+        if (nextRating == 5) {
+            var starPop = i + "star-5";
+            $('#'+starPop).prop("checked", "checked");
+        } else if (nextRating == 4) {
+            var starPop = i + "star-4";
+            $('#'+starPop).prop("checked", "checked");
+            
+        } else if (nextRating == 3) {
+            var starPop = i + "star-3";
+            $('#'+starPop).prop("checked", "checked");
+            
+        } else if (nextRating == 2) {
+            
+            var starPop = i + "star-2";
+            $('#'+starPop).prop("checked", "checked");
+        } else if (nextRating == 1) {
+            var starPop = i + "star-1";
+            $('#'+starPop).prop("checked", "checked");
+
+        }
     }
 }
 
