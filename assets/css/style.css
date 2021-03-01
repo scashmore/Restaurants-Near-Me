@@ -17,7 +17,6 @@ body{
 .card {
     display: flex;
     background-color: var(--main-card-color);
-    color: var(--main-text-color);
 }
 .uk-grid {
     margin-left: 0;
@@ -66,6 +65,10 @@ h3 {
 h2 {
     margin: 3%;
 }
+#results {
+    padding: 15%;
+}
+/* Toggle bar */
 .uk-tab>.uk-active>a {
     color: var(--hover-color);
     border-style: solid;
@@ -83,6 +86,7 @@ h2 {
     border-top-right-radius: 25%;
     border-bottom: none;   
 }
+/* Navigation bar */
 .uk-navbar-nav>li.uk-active>a {
     color: var(--main-text-color);
 }
@@ -90,6 +94,31 @@ h2 {
     color: var(--main-text-color);
     text-shadow: 2px 2px 2px var(--main-bg-color);
 }
+/* Search Result Style */
+#restName {
+    font-size: 30px;
+    margin-right: 2%;
+    margin-bottom: 5%;
+}
+#restAddress {
+    font-size: 20px
+}
+/* Modal Styles */
+.sectionName {
+    font-size: 30px;
+    font-weight: bold;
+}
+.sectionDisc {
+    font-size: 20px;
+}
+.dishName{
+    font-size: 20px;
+    font-weight: bold;
+}
+.dishDisc {
+    font-size: 15px;
+}
+/* Media size adjustments */
 @media screen and (max-width: 600px) {
     section {
         flex-direction: column;
