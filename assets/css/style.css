@@ -6,9 +6,9 @@
     --main-text-color: #f1fffa;
     --hover-color: #568259;
 }
-body{
+html{
     background-color: var(--main-bg-color);
-    min-height: 100vh;
+    height: 100vh;
 }
 .navbg {
     background-color: var(--main-button-color);
@@ -129,6 +129,11 @@ h2 {
 }
 /* Comment Styles */
 #restPrint {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3%;
+}
+.restId {
     font-size: 20px;
     font-weight: bold;
     margin: 3%;

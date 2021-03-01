@@ -6,7 +6,7 @@ var mostRecent = function (recentRestId) {
     var lastEl = storedLength - 1;
     var mostRecentName = Object.keys(edited)[lastEl];
     $('#restPrint').text(mostRecentName);
-    $('#restPrint').append('<div class="restId" data-restID="'+recentRestId+'"></div>')
+    $('#restPrint').append('<div class="restId" data-restID="' + recentRestId + '"></div>')
     for (var i = lastEl - 1; i > -1; i--) {
         console.log(Object.keys(edited)[i]);
         var nextRest = Object.keys(edited)[i];
@@ -18,10 +18,9 @@ var mostRecent = function (recentRestId) {
         var nextRating = Object.values(edited)[i][2];
         console.log(nextId);
         console.log(nextComment);
-//Yes I'm using template literal for this
+        //Yes I'm using template literal for this
         var inputCard = `<section class="card uk-margin">
-        <h2>Comments Restaurant</h2>
-        <div id="restName${i}">${nextRest}
+        <div class="restId" id="restName${i}">${nextRest}
         <div class="restId" data-restID="${nextId}"></div>
         </div>
         <form class="textinput">
@@ -41,28 +40,29 @@ var mostRecent = function (recentRestId) {
                 <input class="star star-1 save" id="${i}star-1" type="radio" name="star${i}" value="1"/>
                 <label class="star star-1" for="${i}star-1"></label>
             </div>
-            <button class="restSubmit btn uk-button uk-button-default">Submit</button>
+            <button class="restSubmit btn uk-button uk-button-default">Save</button>
         </form>
+        <button class="goAgain btn uk-button uk-button-default>Get Directions</button>
     </section>`
         $('#allRestPrint').append(inputCard);
         if (nextRating == 5) {
             var starPop = i + "star-5";
-            $('#'+starPop).prop("checked", "checked");
+            $('#' + starPop).prop("checked", "checked");
         } else if (nextRating == 4) {
             var starPop = i + "star-4";
-            $('#'+starPop).prop("checked", "checked");
-            
+            $('#' + starPop).prop("checked", "checked");
+
         } else if (nextRating == 3) {
             var starPop = i + "star-3";
-            $('#'+starPop).prop("checked", "checked");
-            
+            $('#' + starPop).prop("checked", "checked");
+
         } else if (nextRating == 2) {
-            
+
             var starPop = i + "star-2";
-            $('#'+starPop).prop("checked", "checked");
+            $('#' + starPop).prop("checked", "checked");
         } else if (nextRating == 1) {
             var starPop = i + "star-1";
-            $('#'+starPop).prop("checked", "checked");
+            $('#' + starPop).prop("checked", "checked");
 
         }
     }
@@ -94,7 +94,7 @@ $('.restSubmit').on('click', function (event) {
     console.log(restName, restId, textArea, rating);
     var pullLocal = localStorage.getItem('visitedRestaurants');
     var edited = JSON.parse(pullLocal);
-    if (pullLocal === null) {    
+    if (pullLocal === null) {
 
     } else if (Object.keys(edited).length === 1) {
         var firstName = Object.keys(edited)[0];
