@@ -85,6 +85,14 @@ h2 {
     border-bottom: none; 
     
 }
+.tab {
+    color: var(--hover-color);
+    border-style: solid;
+    border-color: var(--hover-color);
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%; 
+    border-bottom: none; 
+}
 .uk-tab>*>a {
     color: var(--main-text-color);
     border-style: solid;
