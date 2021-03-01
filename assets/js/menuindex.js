@@ -79,9 +79,10 @@ var writeRest = function (rests, randomRest) {
 //reruns the randomizer
 $('#notGoingBtn').on('click', function (event) {
     //clears result div before running script again
-    $('#result').empty();
-    $('#menuPrint').empty();
-    getRest(zip);
+    window.location.reload();
+    // $('#result').empty();
+    // $('#menuPrint').empty();
+    // getRest(zip);
 })
 
 $('#goingBtn').on('click', function (event) {
@@ -128,6 +129,6 @@ function loadMenu() {
     myVar = setTimeout(showPageM, 6400);
   };
   function showPageM() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("pageMenu").style.display = "block";
+    $("#loader").css("display", "none");
+    $("#pageMenu").css("display", "block");
   }
