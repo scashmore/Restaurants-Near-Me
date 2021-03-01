@@ -122,4 +122,12 @@ $('#maps').on('click', function (lat, long) {
     else /*else use Google*/
       window.open("https://maps.google.com/maps?daddr="+lat+","+long+"&amp;ll=");
   });
+//page loaders
 
+function loadMenu() {
+    myVar = setTimeout(showPageM, 6400);
+  };
+  function showPageM() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("pageMenu").style.display = "block";
+  }

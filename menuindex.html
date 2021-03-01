@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body onload="loadMenu()">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
         <div class="uk-navbar-left">
 
@@ -32,6 +32,8 @@
 
         </div>
     </nav>
+    <div id="loader">Loading Results</div>
+    <div style="display:none;" id="pageMenu">
     <ul class="card uk-list" id="result" style="flex-direction: column; padding: 10%;">
         <li></li>
     </ul>
@@ -66,6 +68,7 @@
     <button class="btn uk-button uk-button-default" id="notGoingBtn">Not
         Going</button>
     </section>
+    </div>
     <script src="assets/js/menuindex.js"></script>
 </body>
 
