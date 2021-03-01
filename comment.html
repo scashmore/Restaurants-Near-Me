@@ -27,68 +27,35 @@
         <div class="uk-navbar-left">
 
             <ul class="navbg uk-navbar-nav">
-                <li class="uk-active"><a href="#">Home</a></li>
-                <li class="uk-navbar-active"><a href="#">Visited</a></li>
-                <li class="uk-navbar-active"><a href="#">Cooked</a></li>
-                <li class="uk-navbar-active"><a href="#">Last Search</a></li>
+                <li class="uk-active"><a href="index.html">Home</a></li>
+                <li class="uk-navbar-active"><a href="comment.html">Comments</a></li>
             </ul>
 
         </div>
     </nav>
     <div>
         <ul class="toggle" uk-tab ku-switcher>
-            <li class="uk-active"><a href="#">Visited Restaurant</a></li>
+            <li class="uk-active"><a class="tab" href="#">Visited Restaurants</a></li>
             <li><a href="#">Cooked Recipes</a></li>
         </ul>
         <ul class="uk-switcher uk-margin">
             <li id="allRestPrint">
-                <h2>Comments Restaurant</h2>
-                <section class="card uk-margin">
-                    <div id="restPrint"></div>
-                    <form class="textinput">
-                        <textarea row="5" class="uk-input" type="text"
-                            placeholder="Comments"></textarea>
-            
-            
-                        <div class="stars" action="">
-                            <input class="star star-5" id="star-5" type="radio" name="star" value="5"/>
-                            <label class="star star-5" for="star-5"></label>
-                            <input class="star star-4" id="star-4" type="radio" name="star" value="4"/>
-                            <label class="star star-4" for="star-4"></label>
-                            <input class="star star-3" id="star-3" type="radio" name="star" value="3"/>
-                            <label class="star star-3" for="star-3"></label>
-                            <input class="star star-2" id="star-2" type="radio" name="star" value="2"/>
-                            <label class="star star-2" for="star-2"></label>
-                            <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
-                            <label class="star star-1" for="star-1"></label>
-                        </div>
-                        <button class="restSubmit btn uk-button uk-button-default">Submit</button>
-                    </form>
-                </section>
+                <h2>Comments Restaurants</h2>
             </li>
             <li>
-                <section class="card uk-margin">
-                    <h2>Comments Recipe</h2>
-                    <form class="textinput">
-                        <textarea row="5" class="uk-input" type="text"
-                            placeholder="Comments"></textarea>
+                <h2>Comments Recipes</h2>
+                <!-- <div class="recipeContainer" id="recipieContainer">
+                    <a class="btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
             
+                    <div id="modal-center" class="uk-flex-top" uk-modal>
+                        <div class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
             
-                        <div class="stars" action="">
-                            <input class="star star-5" id="star-5" type="radio" name="star" />
-                            <label class="star star-5" for="star-5"></label>
-                            <input class="star star-4" id="star-4" type="radio" name="star" />
-                            <label class="star star-4" for="star-4"></label>
-                            <input class="star star-3" id="star-3" type="radio" name="star" />
-                            <label class="star star-3" for="star-3"></label>
-                            <input class="star star-2" id="star-2" type="radio" name="star" />
-                            <label class="star star-2" for="star-2"></label>
-                            <input class="star star-1" id="star-1" type="radio" name="star" />
-                            <label class="star star-1" for="star-1"></label>
+                            <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
+            
+                            <div id="commentRecipe"></div>
                         </div>
-                        <button id="recipeSubmit" class="btn uk-button uk-button-default">Submit</button>
-                    </form>
-                </section>
+                    </div>
+                </div> -->
             </li>
             </ul>
     </div>

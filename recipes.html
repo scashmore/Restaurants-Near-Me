@@ -20,23 +20,25 @@
 
 </head>
 
-<body>
+<body onload="loadRecipe()">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
         <div class="uk-navbar-left">
 
             <ul class="navbg uk-navbar-nav">
-                <li class="uk-active"><a href="#">Home</a></li>
-                <li class="uk-navbar-active"><a href="#">Comments</a></li>
+                <li class="uk-active"><a href="index.html">Home</a></li>
+                <li class="uk-navbar-active"><a href="comment.html">Comments</a></li>
             </ul>
 
         </div>
     </nav>
-    <ul class="card uk-list" id="result" style="flex-direction: column; padding: 10%;">
+    <div id="loader">Loading Results</div>
+    <div style="display:none;" id="pageRecipe">
+    <ul class="card uk-list recipename" id="result" style="flex-direction: column; padding: 10%;">
         <li></li>
     </ul>
 
 
-    <div class="card image uk-card uk-card-default">
+    <div class="card image uk-card uk-card-default" style="flex-direction: column; padding: 20%">
         <div class="uk-card-media-top">
             <img id="image" src="" alt="">
         </div>
@@ -60,6 +62,7 @@
     <button class="btn uk-button uk-button-default" id="save">Save</button>
     <button class="btn uk-button uk-button-default" id="getNew">Get New Recipe</button>
     </section>
+    </div>
     <script src="assets/js/recipes.js"></script>
 </body>
 

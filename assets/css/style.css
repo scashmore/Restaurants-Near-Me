@@ -6,9 +6,10 @@
     --main-text-color: #f1fffa;
     --hover-color: #568259;
 }
-body{
+html{
     background-color: var(--main-bg-color);
-    min-height: 100vh;
+    height: 100vh;
+    overflow-x: hidden;
 }
 .navbg {
     background-color: var(--main-button-color);
@@ -50,7 +51,7 @@ h3 {
 .subbtns {
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 5% 0 0 0;
 }
 .image {
     margin-bottom: 3%;
@@ -64,10 +65,16 @@ h3 {
 }
 h2 {
     margin: 3%;
+    color: var(--main-text-color);
 }
 #results {
     padding: 15%;
 }
+/* Loader */
+#loader {
+    color: var(--main-text-color);
+    font-size: 45px;
+  }
 /* Toggle bar */
 .uk-tab>.uk-active>a {
     color: var(--hover-color);
@@ -77,6 +84,14 @@ h2 {
     border-top-right-radius: 25%; 
     border-bottom: none; 
     
+}
+.tab {
+    color: var(--hover-color);
+    border-style: solid;
+    border-color: var(--hover-color);
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%; 
+    border-bottom: none; 
 }
 .uk-tab>*>a {
     color: var(--main-text-color);
@@ -103,6 +118,14 @@ h2 {
 #restAddress {
     font-size: 20px
 }
+.recipename {
+    font-size: 30px;
+    padding: 10%;
+}
+.directions {
+    padding: 20%;
+    font-size: 17px;
+}
 /* Modal Styles */
 .sectionName {
     font-size: 30px;
@@ -118,7 +141,19 @@ h2 {
 .dishDisc {
     font-size: 15px;
 }
+/* Comment Styles */
+#restPrint {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3%;
+}
+.restId {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3%;
+}
 /* Media size adjustments */
+
 @media screen and (max-width: 600px) {
     section {
         flex-direction: column;
@@ -127,6 +162,10 @@ h2 {
     .card {
         margin: 0;
     }
+    img { 
+        width: 300px;
+        height: 300px;
+      }
 }
 @media (min-width: 640px) {
     .uk-child-width-expand\@s>:not([class*=uk-width]) {

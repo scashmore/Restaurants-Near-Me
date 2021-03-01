@@ -21,20 +21,23 @@
 
 </head>
 
-<body>
+<body onload="loadMenu()">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click">
         <div class="uk-navbar-left">
 
             <ul class="navbg uk-navbar-nav">
-                <li class="uk-active"><a href="#">Home</a></li>
-                <li class="uk-navbar-active"><a href="#">Comments</a></li>
+                <li class="uk-active"><a href="index.html">Home</a></li>
+                <li class="uk-navbar-active"><a href="comment.html">Comments</a></li>
             </ul>
 
         </div>
     </nav>
+    <div id="loader">Loading Results</div>
+    <div style="display:none;" id="pageMenu">
     <ul class="card uk-list" id="result" style="flex-direction: column; padding: 10%;">
         <li></li>
     </ul>
+<!-- 
 
 
     <div class="card image uk-card uk-card-default" id="image">
@@ -42,10 +45,11 @@
             <img src="" alt="">
         </div>
         <div class="uk-card-body"></div>
-    </div>
+    </div> -->
 
-    <div class="card uk-card-body">
-        <a class="uk-link" href="#" id="maps">Click for Directions in Maps</a>
+
+    <div class="card uk-card-body directions">
+        <a class="uk-link maplink" id="maps">Click for Directions in Maps</a>
     </div>
 
 
@@ -66,6 +70,7 @@
     <button class="btn uk-button uk-button-default" id="notGoingBtn">Not
         Going</button>
     </section>
+    </div>
     <script src="assets/js/menuindex.js"></script>
 </body>
 

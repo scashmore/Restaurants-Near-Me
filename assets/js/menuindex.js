@@ -68,9 +68,10 @@ var writeRest = function (rests, randomRest) {
 //reruns the randomizer
 $('#notGoingBtn').on('click', function (event) {
     //clears result div before running script again
-    $('#result').empty();
-    $('#menuPrint').empty();
-    getRest(zip);
+    window.location.reload();
+    // $('#result').empty();
+    // $('#menuPrint').empty();
+    // getRest(zip);
 })
 
 var pullLocal = JSON.parse(localStorage.getItem('visitedRestaurants')) || {};
@@ -106,5 +107,13 @@ $('#maps').on('click', function (lat, long) {
   
     else /*else use Google*/
       window.open("https://maps.google.com/maps?daddr="+lat+","+long+"&amp;ll=");
+  });
+//page loaders
+
+function loadMenu() {
+    myVar = setTimeout(showPageM, 6400);
+  };
+  function showPageM() {
+    $("#loader").css("display", "none");
+    $("#pageMenu").css("display", "block");
   }
-);
