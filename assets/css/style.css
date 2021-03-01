@@ -103,6 +103,10 @@ h2 {
 #restAddress {
     font-size: 20px
 }
+.recipename {
+    font-size: 30px;
+    padding: 10%;
+}
 /* Modal Styles */
 .sectionName {
     font-size: 30px;
@@ -119,6 +123,7 @@ h2 {
     font-size: 15px;
 }
 /* Media size adjustments */
+
 @media screen and (max-width: 600px) {
     section {
         flex-direction: column;
@@ -127,6 +132,10 @@ h2 {
     .card {
         margin: 0;
     }
+    img { 
+        width: 300px;
+        height: 300px;
+      }
 }
 @media (min-width: 640px) {
     .uk-child-width-expand\@s>:not([class*=uk-width]) {
