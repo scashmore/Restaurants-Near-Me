@@ -49,7 +49,6 @@ var writeRest = function (rests, randomRest) {
     console.log(lat);
     console.log(long);
     console.log(menu);
-    maps(lat, long);
     $('#result').append('<div id="restName">' + name + '</div>');
     $('#result').append('<div id="restAddress">' + address + '</div>');
     // Make this not dipslay, will pull from to save id to local storage for review page
@@ -111,7 +110,7 @@ $('#goingBtn').on('click', function (event) {
 
 //open maps
 
-function maps(lat, long) {
+$('#maps').on('click', function (lat, long) {
     var lat = $('#lat').attr("data-lat");
     var long = $('#lon').attr("data-lon");
     if /*for iOS*/
@@ -122,5 +121,5 @@ function maps(lat, long) {
   
     else /*else use Google*/
       window.open("https://maps.google.com/maps?daddr="+lat+","+long+"&amp;ll=");
-  }
+  });
 
