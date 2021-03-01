@@ -26,25 +26,25 @@ Home Screen
 ![](\assets\Images.PNG\projectshot1.PNG)
 
 **Going Out** button generates the search bar for the users zipcode
-![](\assets\Images.PNG\ProGoingOut.PNG.png)
+![](\assets\Images.PNG\ProGoingOut.PNG)
 
 Search Results
-![](\assets\Images.PNG\ProjSearched.PNG.png)
+![](\assets\Images.PNG\ProjSearched.PNG)
 
 Link for Directions to randomized restaurant
-![](\assets\Images.PNG\ProjMap.PNG.png)
+![](\assets\Images.PNG\ProjMap.PNG)
 
 Restuarant Menu
-![](assets\Images.PNG\ProjMenu.PNG.png)
+![](assets\Images.PNG\ProjMenu.PNG)
 
 **Staying In** button generates a **Look for Recipe** button to pull a randomized recipe
-![](\assets\Images.PNG\ProjStayingIn.PNG.png)
+![](\assets\Images.PNG\ProjStayingIn.PNG)
 
 The buttons on the Recipe page will allow the user to save the recipe, read the recipe instructions or generate a new recipe 
-![](\assets\Images.PNG\ProjRecipe.PNG.png)
+![](\assets\Images.PNG\ProjRecipe.PNG)
 
 The comment section in the navigation bar allows the user to toggle between the comments on the Restaurant page and the Recipe page
-![](assets\Images.PNG\ProjComments.PNG.png)
+![](assets\Images.PNG\ProjComments.PNG)
 
 
 
