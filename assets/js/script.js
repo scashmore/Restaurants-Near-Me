@@ -27,7 +27,7 @@ $('#submitCity').submit( function(event) {
 });
 $('#submitRecipe').submit( function(event) {
     event.preventDefault();
-    window.location.href = "page4.html";
+    window.location.href = "recipes.html";
 });
 $('#submitRate').on('click', function() {
     localStorage.unshift($(this).attr('id'), $(this).prev().val());
