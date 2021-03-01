@@ -45,6 +45,10 @@ var mostRecent = function (recentRestId) {
         </form>
     </section>`
         $('#allRestPrint').append(inputCard);
+        if (nextRating == 5) {
+            var starPop = i + "star-5";
+            $('#'+starPop).prop("checked", "checked");
+        }
     }
 }
 
