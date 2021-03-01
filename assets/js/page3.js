@@ -84,25 +84,21 @@ $('#goingBtn').on('click', function (event) {
     var restId = $('#restId').attr("data-restId");
     var pullLocal = localStorage.getItem('visitedRestaurants');
     var edited = JSON.parse(pullLocal);
-    console.log(firstName);
-    console.log(firstId);
+    console.log(edited);
+    console.log(pullLocal);
     if (pullLocal === null) {
-        var firstObj = new Object();
-        firstObj[rest] = restId;
+        var firstObj = [rest, restId, "", ""];
         localStorage.setItem('visitedRestaurants', JSON.stringify(firstObj));
-        console.log(JSON.stringify(firstObj));
-    } else if (Object.keys(edited).length === 1) {
-        var firstName = Object.keys(edited)[0];
-        var firstId = edited[Object.keys(edited)[0]];
+    } else if (Array.isArray(edited)) {
         var newObj = new Object();
-        newObj[rest] = restId;
-        newObj[firstName] = firstId;
+        var newArr = [restId, "", ""];
+        newObj[rest] = newArr;
+        newObj[edited[0]] = [edited[1], edited[2], edited[3]];
         localStorage.setItem('visitedRestaurants', JSON.stringify(newObj));
     } else {
         var current = JSON.parse(localStorage.getItem('visitedRestaurants'));
-        current[rest] = restId
+        current[rest] = [restId, "", ""];
         localStorage.setItem('visitedRestaurants', JSON.stringify(current));
-        console.log(JSON.parse(localStorage.getItem('visitedRestaurants')));
     }
 })
 

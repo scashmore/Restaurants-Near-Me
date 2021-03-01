@@ -39,7 +39,7 @@ label.star:hover {
   color: #fe7;
 }
 
-label.star:before {
+label.star::before {
   content: "\f006";
   font-family: FontAwesome;
 }
