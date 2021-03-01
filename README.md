@@ -29,22 +29,22 @@ Home Screen
 ![](\assets\Images.PNG\ProGoingOut.PNG)
 
 Search Results
-![](\assets\Images.PNG\ProjSearched.PNG)
+![](\assets\Images\ProjSearched.PNG)
 
 Link for Directions to randomized restaurant
-![](\assets\Images.PNG\ProjMap.PNG)
+![](\assets\Images\ProjMap.PNG)
 
 Restuarant Menu
-![](assets\Images.PNG\ProjMenu.PNG)
+![](assets\Images\ProjMenu.PNG)
 
 **Staying In** button generates a **Look for Recipe** button to pull a randomized recipe
-![](\assets\Images.PNG\ProjStayingIn.PNG)
+![](\assets\Images\ProjStayingIn.PNG)
 
 The buttons on the Recipe page will allow the user to save the recipe, read the recipe instructions or generate a new recipe 
-![](\assets\Images.PNG\ProjRecipe.PNG)
+![](\assets\Images\ProjRecipe.PNG)
 
 The comment section in the navigation bar allows the user to toggle between the comments on the Restaurant page and the Recipe page
-![](assets\Images.PNG\ProjComments.PNG)
+![](assets\Images\ProjComments.PNG)
 
 
 
