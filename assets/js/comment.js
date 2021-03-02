@@ -206,6 +206,7 @@ $('.maps').on('click', function (lat, long) {
         window.open("https://maps.google.com/maps?daddr=" + lat + "," + long + "&amp;ll=");
 });
 
+
 $('.recipeButton').on('click', function () {
     var mealId = $(this).parent().prev().prev().children().data("restnum");
     var domLoc = $(this)
