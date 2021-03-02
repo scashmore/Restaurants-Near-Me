@@ -16,35 +16,33 @@ When the user chooses the **Staying In** option the website will 'fetch' the cal
 - picture of the recipe
 - recipe instructions
 
-The user has the option to save the recipe as well as any comments to local storage for future use.  There is a **Get New Recipie** button avaialble on the page that will generate an alternate recipe if it is clicked.
+The user has the option to save the recipe as well as any comments to local storage for future use.  There is a **Get New Recipie** button avaialble on the page that will generate an alternate recipe if it is cliced.
 
 The website utilizes a navigation bar to help the user maneuver from the HOME page to the saved COMMENTS for their dining/cooking experience.
 
 ## Functionality
 
 Home Screen
-![](\assets\Images.PNG\projectshot1.PNG)
-
-**Going Out** button generates the search bar for the users zipcode
-![](\assets\Images.PNG\ProGoingOut.PNG)
+![Image](assets/images/homePage.png)
 
 Search Results
-![](\assets\Images\ProjSearched.PNG)
+![Image](assets/images/RestResult.png)
 
 Link for Directions to randomized restaurant
-![](\assets\Images\ProjMap.PNG)
+![Image](assets/images/GoogleMap.png)
 
 Restuarant Menu
-![](assets\Images\ProjMenu.PNG)
+![Image](assetsimages/RestMenu.png)
 
-**Staying In** button generates a **Look for Recipe** button to pull a randomized recipe
-![](\assets\Images\ProjStayingIn.PNG)
+Recipe Image
+![Image](assets/images/RecipeImage.png)
 
-The buttons on the Recipe page will allow the user to save the recipe, read the recipe instructions or generate a new recipe 
-![](\assets\Images\ProjRecipe.PNG)
+Recipe Modal
+![Image](assets/images/RecipeModal.png)
 
-The comment section in the navigation bar allows the user to toggle between the comments on the Restaurant page and the Recipe page
-![](assets\Images\ProjComments.PNG)
+The comment section for the Restaurant page and the Recipe page
+![Image](assets/images/commentRest.png)
+![Image](assets/images/commentsRec.png)
 
 
 
@@ -54,3 +52,12 @@ The comment section in the navigation bar allows the user to toggle between the 
 * The URL of the functional, [deployed](https://scashmore.github.io/Restaurants-Near-Me/) application.
 
 * The URL of the GitHub [repository](https://github.com/scashmore/Restaurants-Near-Me)
+
+## Credit
+Taylor Weeks: https://github.com/tweeks07
+
+Shawn Fox: https://github.com/SFoxGit
+
+Uriel Rosario: https://github.com/urielrosario
+
+Susan Ashmore: https://github.com/scashmore
