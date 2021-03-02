@@ -16,33 +16,33 @@ When the user chooses the **Staying In** option the website will 'fetch' the cal
 - picture of the recipe
 - recipe instructions
 
-The user has the option to save the recipe as well as any comments to local storage for future use.  There is a **Get New Recipie** button avaialble on the page that will generate an alternate recipe if it is clicked.
+The user has the option to save the recipe as well as any comments to local storage for future use.  There is a **Get New Recipie** button avaialble on the page that will generate an alternate recipe if it is cliced.
 
 The website utilizes a navigation bar to help the user maneuver from the HOME page to the saved COMMENTS for their dining/cooking experience.
 
 ## Functionality
 
 Home Screen
-![Image](assets\images\homePage.PNG)
+![Image](assets/images/homePage.PNG)
 
 Search Results
-![Image](assets\images\RestResult.PNG)
+![Image](assets/images/RestResult.PNG)
 
 Link for Directions to randomized restaurant
-![Image](assets\images\GoogleMap.PNG)
+![Image](assets/images/GoogleMap.PNG)
 
 Restuarant Menu
-![Image](assetsimages\RestMenu.PNG)
+![Image](assetsimages/RestMenu.PNG)
 
 Recipe Image
-![Image](assets\images\RecipeImage.PNG)
+![Image](assets/images/RecipeImage.PNG)
 
 Recipe Modal
-![Image](assets\images\RecipeModal.PNG)
+![Image](assets/images/RecipeModal.PNG)
 
 The comment section for the Restaurant page and the Recipe page
-![Image](assets\images\commentRest.PNG)
-![Image](assets\images\commentsRec.PNG)
+![Image](assets/images/commentRest.PNG)
+![Image](assets/images/commentsRec.PNG)
 
 
 
