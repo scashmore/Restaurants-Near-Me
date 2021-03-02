@@ -1,14 +1,3 @@
-//Taylor's code
-
-// var closeBtnEl = $('#closeBtn');
-// var goingBtnEl = $('#goingBtn');
-// var notGoingBtn = $('#notGoingBtn');
-
-// closeBtnEl.on('click', function() {};
-// goingBtnEl.on('click', function() {};
-// notGoingBtn.on('click', function() {};
-
-//Shawn's code
 var getRest = function (city) {
     $("#loader").css("display", "block");
     $("#pageMenu").css("display", "none");
@@ -88,29 +77,25 @@ $('#notGoingBtn').on('click', function (event) {
     // getRest(zip);
 })
 
+var pullLocal = JSON.parse(localStorage.getItem('visitedRestaurants')) || {};
 $('#goingBtn').on('click', function (event) {
     // need save to local storage savedRestaurants name + ID
+    var lat = $('#lat').attr("data-lat");
+    var long = $('#lon').attr("data-lon");
     var rest = $('#restName').text();
-    var restId = $('#restId').attr("data-restId");
-    var pullLocal = localStorage.getItem('visitedRestaurants');
-    var edited = JSON.parse(pullLocal);
-    console.log(edited);
+    var restId = $('#restId').attr("data-restID");
     console.log(pullLocal);
-    if (pullLocal === null) {
-        var firstObj = [rest, restId, "", ""];
-        localStorage.setItem('visitedRestaurants', JSON.stringify(firstObj));
-    } else if (Array.isArray(edited)) {
-        var newObj = new Object();
-        var newArr = [restId, "", ""];
-        newObj[rest] = newArr;
-        newObj[edited[0]] = [edited[1], edited[2], edited[3]];
-        localStorage.setItem('visitedRestaurants', JSON.stringify(newObj));
-    } else {
-        var current = JSON.parse(localStorage.getItem('visitedRestaurants'));
-        current[rest] = [restId, "", ""];
-        localStorage.setItem('visitedRestaurants', JSON.stringify(current));
-    }
-})
+        pullLocal[restId]= {
+            name: rest, 
+            comment: "",
+            rating: "",
+            latitude: lat,
+            longitude: long,
+        },
+        pullLocal.last = restId;
+    localStorage.setItem('visitedRestaurants', JSON.stringify(pullLocal));
+});    
+    
 
 //open maps
 
