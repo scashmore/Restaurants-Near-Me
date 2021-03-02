@@ -23,9 +23,9 @@ var mostRecent = function (recentRestId) {
             var lat = pullLocalRest[element].latitude;
             var lon = pullLocalRest[element].longitude;
             //Yes I'm using template literal for this
-            var inputCard = `<section class="card uk-margin">
-                <div id="restName${i}">${nextRest}
-                    <div class="restId" data-restNum="${nextId}"></div>
+            var inputCard = `<section class="cardC uk-margin">
+                <div class="restId" id="restName${i}">${nextRest}
+                    <div data-restNum="${nextId}"></div>
                 </div>
                 <form class="textinput">
                 <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
@@ -41,10 +41,12 @@ var mostRecent = function (recentRestId) {
                     <input class="star star-1 save" id="${i}star-1" type="radio" name="star${i}" value="1"/>
                     <label class="star star-1" for="${i}star-1"></label>
                 </div>
+                <div class="displayC">
                 <button class="restSubmit btn uk-button uk-button-default">Submit</button>
                 <div data-lat="${lat}"></div>
                 <button class="maps btn uk-button uk-button-default">Get Directions Again!</button>
                 <div data-lon="${lon}"></div>
+                </div>
                 </form>
                 </section>`;
             $('#allRestPrint').append(inputCard);
@@ -89,9 +91,9 @@ var popRecipes = function () {
             console.log(nextComment);
             var nextRating = pullLocalRec[element].rating;
             //Yes I'm using template literal for this
-            var inputCard = `<section class="card uk-margin">
-                <div id="restName${i}">${nextRest}
-                    <div class="restId" data-restNum="${nextId}"></div>
+            var inputCard = `<section class="cardC uk-margin">
+                <div class="restId" id="restName${i}">${nextRest}
+                    <div data-restNum="${nextId}"></div>
                 </div>
                 <form class="textinput">
                 <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
@@ -107,7 +109,9 @@ var popRecipes = function () {
                     <input class="star star-1 save" id="${i}star-1" type="radio" name="star${i}" value="1"/>
                     <label class="star star-1" for="${i}star-1"></label>
                 </div>
+                <div class="displayC">
                 <button class="recSubmit btn uk-button uk-button-default">Submit</button>
+                </div>
                 </form>
                 </section>`;
             $('#allRecipePrint').append(inputCard);
