@@ -40,10 +40,13 @@ var mostRecent = function (recentRestId) {
                     <input class="star star-1 save" id="${i}star-1" type="radio" name="star${i}" value="1"/>
                     <label class="star star-1" for="${i}star-1"></label>
                 </div>
+
+                <div class="displayC">
                 <button class="restSubmit btn uk-button uk-button-default">Submit</button>
                 <div data-lat="${lat}"></div>
                 <button class="maps btn uk-button uk-button-default">Get Directions Again!</button>
                 <div data-lon="${lon}"></div>
+                </div>
                 </form>
                 </section>`;
                 $('#allRestPrint').append(inputCard);
@@ -108,7 +111,9 @@ var popRecipes = function () {
                     <input class="star star-1 save" id="${i}star-1" type="radio" name="star${i}" value="1"/>
                     <label class="star star-1" for="${i}star-1"></label>
                 </div>
+                <div class="displayC">
                 <button class="recSubmit btn uk-button uk-button-default">Submit</button>
+                </div>
                 </form>
                 <div class="recipeContainer" id="recipieContainer">
                     <a class="btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
@@ -187,11 +192,11 @@ $('.recSubmit').on('click', function (event) {
     console.log(pullLocalRec);
     localStorage.setItem('savedMeals', JSON.stringify(pullLocalRec));
 });
-
 $('.maps').on('click', function (lat, long) {
     var lat = $(this).prev().attr("data-lat");
     var long = $(this).next().attr("data-lon");
     if /*for iOS*/
+
         ((navigator.platform.indexOf("iPhone") != -1) ||
         (navigator.platform.indexOf("iPod") != -1) ||
         (navigator.platform.indexOf("iPad") != -1))
