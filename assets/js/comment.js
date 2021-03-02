@@ -114,7 +114,7 @@ var popRecipes = function () {
                 <button class="recSubmit btn uk-button uk-button-default">Submit</button>
                 <div class="recipeContainer" id="recipieContainer">
                 
-                <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
+                <a class="recipeButton btn uk-button uk-button-default" data-id=${nextId} href="#modal-center" uk-toggle>Recipe</a>
                 <div id="modal-center" class="uk-flex-top" uk-modal>
                         <div id=${nextId} class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
             
@@ -206,8 +206,9 @@ $('.maps').on('click', function (lat, long) {
 });
 
 
-$('.recipeButton').on('click', function () {
-    var mealId = $(this).parent().prev().prev().children().data("restnum");
+$('.recipeButton').on('click', function (event) {
+    event.preventDefault();
+    var mealId = $(this).attr("data-id");
     console.log(mealId);
     var domLoc = $(this);
     fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + mealId)

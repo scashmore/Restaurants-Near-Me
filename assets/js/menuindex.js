@@ -4,7 +4,7 @@ var getRest = function (city) {
     fetch("https://documenu.p.rapidapi.com/restaurants/zip_code/" + city + "?size=100&fullmenu=true", {
         "method": "GET",
         "headers": {
-            "x-api-key": "e9fe0dd92c9b93bedf0eff314991856e",
+            "x-api-key": "2de694e41e7bf0f9fe13266e96f2a045",
             "x-rapidapi-key": "88e1447b5fmsh82bcb1516d4eca7p18ca6bjsn49a0d0de2e35",
             "x-rapidapi-host": "documenu.p.rapidapi.com"
         }
