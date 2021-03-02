@@ -40,10 +40,6 @@ var mostRecent = function (recentRestId) {
                     <input class="star star-1 save" id="${i}star-1" type="radio" name="star${i}" value="1"/>
                     <label class="star star-1" for="${i}star-1"></label>
                 </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> aa68a28cb2036d35470163bfdddcecf3ef433168
                 <div class="displayC">
                 <button class="restSubmit btn uk-button uk-button-default">Submit</button>
                 <div data-lat="${lat}"></div>
@@ -116,19 +112,10 @@ var popRecipes = function () {
                 </div>
                 <div class="displayC">
                 <button class="recSubmit btn uk-button uk-button-default">Submit</button>
-<<<<<<< HEAD
                 <div class="recipeContainer" id="recipieContainer">
                 
                 <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
-                
-=======
-                </div>
-                </form>
-                <div class="recipeContainer" id="recipieContainer">
-                    <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
-            
->>>>>>> aa68a28cb2036d35470163bfdddcecf3ef433168
-                    <div id="modal-center" class="uk-flex-top" uk-modal>
+                <div id="modal-center" class="uk-flex-top" uk-modal>
                         <div id=${nextId} class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
             
                             <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
