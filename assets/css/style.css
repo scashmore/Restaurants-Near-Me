@@ -162,13 +162,39 @@ h2 {
     .card {
         margin: 0;
     }
-    img { 
+    .food { 
         width: 300px;
         height: 300px;
       }
+    .maplink {
+        width: 75px;
+        height: 75px;
+    }
 }
 @media (min-width: 640px) {
     .uk-child-width-expand\@s>:not([class*=uk-width]) {
         margin: 1%;
+    }
+    .btnhome {
+        width: 500px;
+        height: 150px;
+        font-size: 25px;
+    }
+    .formbtn {
+        width: 175px;
+        height: 50px;
+        font-size: 15px;
+    }
+    .cardC {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--main-card-color);
+    }
+    .displayC {
+        flex-direction: row;
+    }
+    .maplink {
+        width: 100px;
+        height: 100px;
     }
 }
