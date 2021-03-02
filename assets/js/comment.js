@@ -2,7 +2,7 @@ var pullLocalRest = JSON.parse(localStorage.getItem('visitedRestaurants')) || {}
 var pullLocalRec = JSON.parse(localStorage.getItem('savedMeals')) || {};
 //on page load, write most recent saved rest
 var mostRecent = function (recentRestId) {
-    if (Object.keys(pullLocalRec).length !== 0) {
+    if (Object.keys(pullLocalRest).length !== 0) {
         var lastId = pullLocalRest.last;
         var mostRecentName = pullLocalRest[lastId].name;
         var mostRecentCom = pullLocalRest[lastId].comment;
@@ -116,14 +116,14 @@ var popRecipes = function () {
                 </div>
                 </form>
                 <div class="recipeContainer" id="recipieContainer">
-                    <a class="btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
+                    <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
             
                     <div id="modal-center" class="uk-flex-top" uk-modal>
-                        <div class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
+                        <div id=${nextId} class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
             
-                            <button class="recipeButton uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
+                            <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
             
-                            <div id="commentRecipe"></div>
+                            <div class="commentRecipe"></div>
                         </div>
                     </div>
                 </div>
@@ -206,4 +206,52 @@ $('.maps').on('click', function (lat, long) {
         window.open("https://maps.google.com/maps?daddr=" + lat + "," + long + "&amp;ll=");
 });
 
-$('.recipeButton')
+
+$('.recipeButton').on('click', function () {
+    var mealId = $(this).parent().prev().prev().children().data("restnum");
+    var domLoc = $(this)
+    fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + mealId)
+        .then(function (response, domLoc) {
+            if (response.ok) {
+                response.json().then(function (data, domLoc) {
+                    console.log(data);
+                    writeRecipe(data, domLoc);
+                });
+            }
+        });
+    var writeRecipe = function (data) {
+        var name = data.meals[0].strMeal;
+        var image = data.meals[0].strMealThumb;
+        var instruct = data.meals[0].strInstructions;
+        var mealId = data.meals[0].idMeal;
+        var ingObj = new Object;
+        var print = $('#' + mealId);
+        console.log(print);
+        for (var i = 1; i < 21; i++) {
+            if (data.meals[0]["strIngredient" + i] !== "") {
+                var ingredient = data.meals[0]["strIngredient" + i];
+                var measure = data.meals[0]["strMeasure" + i];
+                ingObj[ingredient] = measure;
+            }
+        }
+        console.log(ingObj);
+        for (var j = 0; j < Object.keys(ingObj).length; j++) {
+            print.append('<div class="dishDisc">' + Object.keys(ingObj)[j] + ': ' + ingObj[Object.keys(ingObj)[j]] + '</div>');
+        }
+        print.append('<div class="dishName">Instructions: </div>');
+        print.append('<div class="dishName">' + instruct + '</div>');
+    }
+
+})
+
+var getRecipe = function () {
+    fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772')
+        .then(function (response) {
+            if (response.ok) {
+                response.json().then(function (data) {
+                    console.log(data);
+                    recipePrint(data);
+                });
+            }
+        });
+}
