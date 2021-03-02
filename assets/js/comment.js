@@ -2,33 +2,7 @@ var pullLocalRest = JSON.parse(localStorage.getItem('visitedRestaurants')) || {}
 var pullLocalRec = JSON.parse(localStorage.getItem('savedMeals')) || {};
 //on page load, write most recent saved rest
 var mostRecent = function (recentRestId) {
-<<<<<<< HEAD
-    var storedLength = Object.keys(pullLocalRest).length;
-    var lastId = pullLocalRest.last;
-    var mostRecentName = pullLocalRest[lastId].name;
-    var mostRecentCom = pullLocalRest[lastId].comment;
-    var mostRecentRate = pullLocalRest[lastId].rating;
-    console.log(mostRecentName);
-    $('#restPrint').text(mostRecentName);
-    $('#restPrint').append('<div class="restId" data-restID="' + lastId + '"></div>')
-    var keyArr = Object.keys(pullLocalRest);
-    var i = 1;
-    keyArr.forEach(element => {
-        console.log(element);
-        if (element !== "last") {
-            var nextId = element;
-            var nextRest = pullLocalRest[element].name;
-            var nextComment = pullLocalRest[element].comment;
-            console.log(nextComment);
-            var nextRating = pullLocalRest[element].rating;
-            var lat = pullLocalRest[element].latitude;
-            var lon = pullLocalRest[element].longitude;
-            //Yes I'm using template literal for this
-            var inputCard = `<section class="cardC uk-margin">
-                <div class="restId" id="restName${i}">${nextRest}
-                    <div data-restNum="${nextId}"></div>
-=======
-    if (Object.keys(pullLocalRec).length !== 0) {
+    if (Object.keys(pullLocalRest).length !== 0) {
         var lastId = pullLocalRest.last;
         var mostRecentName = pullLocalRest[lastId].name;
         var mostRecentCom = pullLocalRest[lastId].comment;
@@ -49,9 +23,8 @@ var mostRecent = function (recentRestId) {
                 var lon = pullLocalRest[element].longitude;
                 //Yes I'm using template literal for this
                 var inputCard = `<section class="card uk-margin">
-                <div id="restName${i}">${nextRest}
-                    <div class="restId" data-restNum="${nextId}"></div>
->>>>>>> ecde6213ddb3af9bd44bceb1dbf62782cac80691
+                <div class="restId" id="restName${i}">${nextRest}
+                    <div data-restNum="${nextId}"></div>
                 </div>
                 <form class="textinput">
                 <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
@@ -99,30 +72,6 @@ var mostRecent = function (recentRestId) {
 }
 
 var popRecipes = function () {
-<<<<<<< HEAD
-    var storedLength = Object.keys(pullLocalRec).length;
-    var lastId = pullLocalRec.last;
-    var mostRecentName = pullLocalRec[lastId].name;
-    var mostRecentCom = pullLocalRec[lastId].comment;
-    var mostRecentRate = pullLocalRec[lastId].rating;
-    console.log(mostRecentName);
-    $('#restPrint').text(mostRecentName);
-    $('#restPrint').append('<div class="restId" data-restID="' + lastId + '"></div>')
-    var keyArr = Object.keys(pullLocalRec);
-    var i = 100;
-    keyArr.forEach(element => {
-        console.log(element);
-        if (element !== "last") {
-            var nextId = element;
-            var nextRest = pullLocalRec[element].name;
-            var nextComment = pullLocalRec[element].comment;
-            console.log(nextComment);
-            var nextRating = pullLocalRec[element].rating;
-            //Yes I'm using template literal for this
-            var inputCard = `<section class="cardC uk-margin">
-                <div class="restId" id="restName${i}">${nextRest}
-                    <div data-restNum="${nextId}"></div>
-=======
     if (Object.keys(pullLocalRec).length !== 0) {
         var storedLength = Object.keys(pullLocalRec).length;
         var lastId = pullLocalRec.last;
@@ -144,9 +93,8 @@ var popRecipes = function () {
                 var nextRating = pullLocalRec[element].rating;
                 //Yes I'm using template literal for this
                 var inputCard = `<section class="card uk-margin">
-                <div id="restName${i}">${nextRest}
-                    <div class="restId" data-restNum="${nextId}"></div>
->>>>>>> ecde6213ddb3af9bd44bceb1dbf62782cac80691
+                <div class="restId" id="restName${i}">${nextRest}
+                    <div data-restNum="${nextId}"></div>
                 </div>
                 <form class="textinput">
                 <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
@@ -164,20 +112,21 @@ var popRecipes = function () {
                 </div>
                 <div class="displayC">
                 <button class="recSubmit btn uk-button uk-button-default">Submit</button>
-                </div>
-                </form>
                 <div class="recipeContainer" id="recipieContainer">
-                    <a class="btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
-            
+                
+                <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
+                
                     <div id="modal-center" class="uk-flex-top" uk-modal>
-                        <div class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
+                        <div id=${nextId} class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
             
-                            <button class="recipeButton uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
+                            <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
             
-                            <div id="commentRecipe"></div>
+                            <div class="commentRecipe"></div>
                         </div>
                     </div>
                 </div>
+                </div>
+                </form>
                 </section>`;
                 $('#allRecipePrint').append(inputCard);
                 if (nextRating == 5) {
@@ -243,11 +192,11 @@ $('.recSubmit').on('click', function (event) {
     console.log(pullLocalRec);
     localStorage.setItem('savedMeals', JSON.stringify(pullLocalRec));
 });
-
 $('.maps').on('click', function (lat, long) {
     var lat = $(this).prev().attr("data-lat");
     var long = $(this).next().attr("data-lon");
     if /*for iOS*/
+
         ((navigator.platform.indexOf("iPhone") != -1) ||
         (navigator.platform.indexOf("iPod") != -1) ||
         (navigator.platform.indexOf("iPad") != -1))
@@ -257,4 +206,52 @@ $('.maps').on('click', function (lat, long) {
         window.open("https://maps.google.com/maps?daddr=" + lat + "," + long + "&amp;ll=");
 });
 
-$('.recipeButton')
+
+$('.recipeButton').on('click', function () {
+    var mealId = $(this).parent().prev().prev().children().data("restnum");
+    var domLoc = $(this)
+    fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + mealId)
+        .then(function (response, domLoc) {
+            if (response.ok) {
+                response.json().then(function (data, domLoc) {
+                    console.log(data);
+                    writeRecipe(data, domLoc);
+                });
+            }
+        });
+    var writeRecipe = function (data) {
+        var name = data.meals[0].strMeal;
+        var image = data.meals[0].strMealThumb;
+        var instruct = data.meals[0].strInstructions;
+        var mealId = data.meals[0].idMeal;
+        var ingObj = new Object;
+        var print = $('#' + mealId);
+        console.log(print);
+        for (var i = 1; i < 21; i++) {
+            if (data.meals[0]["strIngredient" + i] !== "") {
+                var ingredient = data.meals[0]["strIngredient" + i];
+                var measure = data.meals[0]["strMeasure" + i];
+                ingObj[ingredient] = measure;
+            }
+        }
+        console.log(ingObj);
+        for (var j = 0; j < Object.keys(ingObj).length; j++) {
+            print.append('<div class="dishDisc">' + Object.keys(ingObj)[j] + ': ' + ingObj[Object.keys(ingObj)[j]] + '</div>');
+        }
+        print.append('<div class="dishName">Instructions: </div>');
+        print.append('<div class="dishName">' + instruct + '</div>');
+    }
+
+})
+
+var getRecipe = function () {
+    fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772')
+        .then(function (response) {
+            if (response.ok) {
+                response.json().then(function (data) {
+                    console.log(data);
+                    recipePrint(data);
+                });
+            }
+        });
+}
