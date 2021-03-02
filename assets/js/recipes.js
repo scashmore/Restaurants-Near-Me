@@ -54,3 +54,11 @@ $('#save').on('click', function () {
 $('#getNew').on('click', function() {
     window.location.reload();
 });
+
+function loadRecipe() {
+    myVar = setTimeout(showPageR, 500);
+  };
+  function showPageR() {
+    $("#loader").css("display", "none");
+    $("#pageRecipe").css("display", "block");
+  }
