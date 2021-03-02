@@ -266,8 +266,4 @@ var getRecipe = function () {
                 });
             }
         });
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> aa68a28cb2036d35470163bfdddcecf3ef433168
