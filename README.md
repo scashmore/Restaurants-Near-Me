@@ -57,6 +57,9 @@ The comment section in the navigation bar allows the user to toggle between the 
 
 ## Credit
 Taylor Weeks: https://github.com/tweeks07
+
 Shawn Fox: https://github.com/SFoxGit
+
 Uriel Rosario: https://github.com/urielrosario
+
 Susan Ashmore: https://github.com/scashmore
