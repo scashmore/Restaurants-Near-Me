@@ -24,7 +24,7 @@ var mostRecent = function (recentRestId) {
                 //Yes I'm using template literal for this
                 var inputCard = `<section class="card uk-margin">
                 <div class="restId" id="restName${i}">${nextRest}
-                    <div data-restNum="${nextId}"></div>
+                    <div data-restnum=${nextId}></div>
                 </div>
                 <form class="textinput">
                 <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
@@ -41,7 +41,7 @@ var mostRecent = function (recentRestId) {
                     <label class="star star-1" for="${i}star-1"></label>
                 </div>
                 <div class="displayC">
-                <button class="restSubmit btn uk-button uk-button-default">Submit</button>
+                    <button class="restSubmit btn uk-button uk-button-default">Submit</button>
                 <div data-lat="${lat}"></div>
                 <button class="maps btn uk-button uk-button-default">Get Directions Again!</button>
                 <div data-lon="${lon}"></div>
@@ -65,8 +65,8 @@ var mostRecent = function (recentRestId) {
                     var starPop = i + "star-1";
                     $('#' + starPop).prop("checked", "checked");
                 };
+                i++;
             }
-            i++;
         });
     }
 }
@@ -87,6 +87,7 @@ var popRecipes = function () {
             console.log(element);
             if (element !== "last") {
                 var nextId = element;
+                console.log(element);
                 var nextRest = pullLocalRec[element].name;
                 var nextComment = pullLocalRec[element].comment;
                 console.log(nextComment);
@@ -94,11 +95,11 @@ var popRecipes = function () {
                 //Yes I'm using template literal for this
                 var inputCard = `<section class="card uk-margin">
                 <div class="restId" id="restName${i}">${nextRest}
-                    <div data-restNum="${nextId}"></div>
+                    <div data-recnum=${nextId}></div>
                 </div>
                 <form class="textinput">
-                <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
-                <div class="stars" action="">
+                <textarea row="5" class="uk-input" type="text" placeholder="Comments" data-comment="">${nextComment}</textarea>
+                <div class="stars" data-rate="" action="">
                     <input class="star star-5 save" id="${i}star-5" type="radio" name="star${i}" value="5"/>
                     <label class="star star-5" for="${i}star-5"></label>
                     <input class="star star-4 save" id="${i}star-4" type="radio" name="star${i}" value="4"/>
@@ -111,7 +112,7 @@ var popRecipes = function () {
                     <label class="star star-1" for="${i}star-1"></label>
                 </div>
                 <div class="displayC">
-                <button class="recSubmit btn uk-button uk-button-default">Submit</button>
+                    <button class="recSubmit btn uk-button uk-button-default">Submit</button>
                 <div class="recipeContainer" id="recipieContainer">
                 
                 <a class="recipeButton btn uk-button uk-button-default" data-id=${nextId} href="#modal-center" uk-toggle>Recipe</a>
@@ -174,20 +175,23 @@ $('input').on('click', function () {
 //Writing this in ID form for now, will probably switch to class to for multi rest display
 $('.restSubmit').on('click', function (event) {
     event.preventDefault();
-    var restId = $(this).parent().prev().children().data("restnum");
+    var restId = $(this).parent().parent().prev().children().attr('data-restnum');
     console.log(restId);
-    pullLocalRest[restId].rating = $(this).prev().val();
-    pullLocalRest[restId].comment = $(this).siblings(0).first().val();
+    console.log($(this).parent().parent().prev().children());
+
+    console.log($(this).parent().prev().val());
+    pullLocalRest[restId].rating = $(this).parent().prev().val();
+    pullLocalRest[restId].comment = $(this).parent().prev().prev().val();
     console.log(pullLocalRest);
     localStorage.setItem('visitedRestaurants', JSON.stringify(pullLocalRest));
 });
 
 $('.recSubmit').on('click', function (event) {
     event.preventDefault();
-    var restId = $(this).parent().prev().children().data("restnum");
+    var restId = $(this).parent().parent().prev().children().attr('data-recnum');
     console.log(restId);
-    pullLocalRec[restId].rating = $(this).prev().val();
-    pullLocalRec[restId].comment = $(this).siblings(0).first().val();
+    pullLocalRec[restId].rating = $(this).parent().prev().val();
+    pullLocalRec[restId].comment = $(this).parent().prev().prev().val();
     console.log(pullLocalRec);
     localStorage.setItem('savedMeals', JSON.stringify(pullLocalRec));
 });
