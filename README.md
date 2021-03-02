@@ -23,26 +23,26 @@ The website utilizes a navigation bar to help the user maneuver from the HOME pa
 ## Functionality
 
 Home Screen
-![](\assets\images\homePage.png)
+![](assets\images\homePage.PNG)
 
 Search Results
-![](\assets\images\RestResult.png)
+![](assets\images\RestResult.PNG)
 
 Link for Directions to randomized restaurant
-![](\assets\images\GoogleMap.png)
+![](assets\images\GoogleMap.PNG)
 
 Restuarant Menu
-![](assets\images\RestMenu.png)
+![](assetsimages\RestMenu.PNG)
 
 Recipe Image
-![](\assets\images\RecipeImage.png)
+![](assets\images\RecipeImage.PNG)
 
 Recipe Modal
-![](\assets\images\RecipeModal.png)
+![](assets\images\RecipeModal.PNG)
 
 The comment section for the Restaurant page and the Recipe page
-![](assets\images\commentRest.png)
-![](assets\images\commentsRec.png)
+![](assets\images\commentRest.PNG)
+![](assets\images\commentsRec.PNG)
 
 
 
