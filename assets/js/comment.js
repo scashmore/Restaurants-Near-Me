@@ -23,8 +23,8 @@ var mostRecent = function (recentRestId) {
                 var lon = pullLocalRest[element].longitude;
                 //Yes I'm using template literal for this
                 var inputCard = `<section class="card uk-margin">
-                <div id="restName${i}">${nextRest}
-                    <div class="restId" data-restNum="${nextId}"></div>
+                <div class="restId" id="restName${i}">${nextRest}
+                    <div data-restNum="${nextId}"></div>
                 </div>
                 <form class="textinput">
                 <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
@@ -94,8 +94,8 @@ var popRecipes = function () {
                 var nextRating = pullLocalRec[element].rating;
                 //Yes I'm using template literal for this
                 var inputCard = `<section class="card uk-margin">
-                <div id="restName${i}">${nextRest}
-                    <div class="restId" data-restNum="${nextId}"></div>
+                <div class="restId" id="restName${i}">${nextRest}
+                    <div data-restNum="${nextId}"></div>
                 </div>
                 <form class="textinput">
                 <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
