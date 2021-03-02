@@ -112,10 +112,11 @@ var popRecipes = function () {
                 </div>
                 <div class="displayC">
                 <button class="recSubmit btn uk-button uk-button-default">Submit</button>
+                </div>
+                </form>
                 <div class="recipeContainer" id="recipieContainer">
-                
-                <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
-                
+                    <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
+            
                     <div id="modal-center" class="uk-flex-top" uk-modal>
                         <div id=${nextId} class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
             
