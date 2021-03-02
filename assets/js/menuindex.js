@@ -10,7 +10,8 @@
 
 //Shawn's code
 var getRest = function (city) {
-
+    $("#loader").css("display", "block");
+    $("#pageMenu").css("display", "none");
     fetch("https://documenu.p.rapidapi.com/restaurants/zip_code/" + city + "?size=100&fullmenu=true", {
         "method": "GET",
         "headers": {
@@ -29,6 +30,8 @@ var getRest = function (city) {
                     writeRest(rests, randomRest);
                 });
             }
+            $("#loader").css("display", "none");
+            $("#pageMenu").css("display", "block");
         })
         .catch(function (error) { });
 };
@@ -115,20 +118,11 @@ $('#maps').on('click', function (lat, long) {
     var lat = $('#lat').attr("data-lat");
     var long = $('#lon').attr("data-lon");
     if /*for iOS*/
-      ((navigator.platform.indexOf("iPhone") != -1) || 
-       (navigator.platform.indexOf("iPod") != -1) || 
-       (navigator.platform.indexOf("iPad") != -1))
-      window.open("maps://maps.google.com/maps?daddr="+lat+","+long+"&amp;ll=");
-  
-    else /*else use Google*/
-      window.open("https://maps.google.com/maps?daddr="+lat+","+long+"&amp;ll=");
-  });
-//page loaders
+        ((navigator.platform.indexOf("iPhone") != -1) ||
+        (navigator.platform.indexOf("iPod") != -1) ||
+        (navigator.platform.indexOf("iPad") != -1))
+        window.open("maps://maps.google.com/maps?daddr=" + lat + "," + long + "&amp;ll=");
 
-function loadMenu() {
-    myVar = setTimeout(showPageM, 6400);
-  };
-  function showPageM() {
-    $("#loader").css("display", "none");
-    $("#pageMenu").css("display", "block");
-  }
+    else /*else use Google*/
+        window.open("https://maps.google.com/maps?daddr=" + lat + "," + long + "&amp;ll=");
+});
