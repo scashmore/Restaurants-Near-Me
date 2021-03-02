@@ -40,7 +40,6 @@ var mostRecent = function (recentRestId) {
                     <input class="star star-1 save" id="${i}star-1" type="radio" name="star${i}" value="1"/>
                     <label class="star star-1" for="${i}star-1"></label>
                 </div>
-
                 <div class="displayC">
                 <button class="restSubmit btn uk-button uk-button-default">Submit</button>
                 <div data-lat="${lat}"></div>
@@ -94,8 +93,8 @@ var popRecipes = function () {
                 var nextRating = pullLocalRec[element].rating;
                 //Yes I'm using template literal for this
                 var inputCard = `<section class="card uk-margin">
-                <div class="restId" id="restName${i}">${nextRest}
-                    <div data-restNum="${nextId}"></div>
+                <div  id="restName${i}">${nextRest}
+                    <div class="restId" data-restNum="${nextId}"></div>
                 </div>
                 <form class="textinput">
                 <textarea row="5" class="uk-input" type="text" placeholder="Comments">${nextComment}</textarea>
@@ -113,12 +112,10 @@ var popRecipes = function () {
                 </div>
                 <div class="displayC">
                 <button class="recSubmit btn uk-button uk-button-default">Submit</button>
-                </div>
-                </form>
                 <div class="recipeContainer" id="recipieContainer">
-                    <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
-            
-                    <div id="modal-center" class="uk-flex-top" uk-modal>
+                
+                <a class="recipeButton btn uk-button uk-button-default" href="#modal-center" uk-toggle>Recipe</a>
+                <div id="modal-center" class="uk-flex-top" uk-modal>
                         <div id=${nextId} class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
             
                             <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
@@ -127,6 +124,8 @@ var popRecipes = function () {
                         </div>
                     </div>
                 </div>
+                </div>
+                </form>
                 </section>`;
                 $('#allRecipePrint').append(inputCard);
                 if (nextRating == 5) {
@@ -209,7 +208,8 @@ $('.maps').on('click', function (lat, long) {
 
 $('.recipeButton').on('click', function () {
     var mealId = $(this).parent().prev().prev().children().data("restnum");
-    var domLoc = $(this)
+    console.log(mealId);
+    var domLoc = $(this);
     fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + mealId)
         .then(function (response, domLoc) {
             if (response.ok) {
@@ -217,13 +217,14 @@ $('.recipeButton').on('click', function () {
                     console.log(data);
                     writeRecipe(data, domLoc);
                 });
-            }
+            } 
         });
     var writeRecipe = function (data) {
         var name = data.meals[0].strMeal;
         var image = data.meals[0].strMealThumb;
         var instruct = data.meals[0].strInstructions;
         var mealId = data.meals[0].idMeal;
+        console.log(mealId);
         var ingObj = new Object;
         var print = $('#' + mealId);
         console.log(print);
