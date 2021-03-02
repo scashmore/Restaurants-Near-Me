@@ -23,28 +23,26 @@ The website utilizes a navigation bar to help the user maneuver from the HOME pa
 ## Functionality
 
 Home Screen
-![](\assets\Images.PNG\projectshot1.PNG)
-
-**Going Out** button generates the search bar for the users zipcode
-![](\assets\Images.PNG\ProGoingOut.PNG)
+![](\assets\images\homePage.png)
 
 Search Results
-![](\assets\Images\ProjSearched.PNG)
+![](\assets\images\RestResult.png)
 
 Link for Directions to randomized restaurant
-![](\assets\Images\ProjMap.PNG)
+![](\assets\images\GoogleMap.png)
 
 Restuarant Menu
-![](assets\Images\ProjMenu.PNG)
+![](assets\images\RestMenu.png)
 
-**Staying In** button generates a **Look for Recipe** button to pull a randomized recipe
-![](\assets\Images\ProjStayingIn.PNG)
+Recipe Image
+![](\assets\images\RecipeImage.png)
 
-The buttons on the Recipe page will allow the user to save the recipe, read the recipe instructions or generate a new recipe 
-![](\assets\Images\ProjRecipe.PNG)
+Recipe Modal
+![](\assets\images\RecipeModal.png)
 
-The comment section in the navigation bar allows the user to toggle between the comments on the Restaurant page and the Recipe page
-![](assets\Images\ProjComments.PNG)
+The comment section for the Restaurant page and the Recipe page
+![](assets\images\commentRest.png)
+![](assets\images\commentsRec.png)
 
 
 
