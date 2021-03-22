@@ -10,9 +10,8 @@ var mostRecent = function (recentRestId) {
         $('#restPrint').text(mostRecentName);
         $('#restPrint').append('<div class="restId" data-restID="' + lastId + '"></div>')
         var keyArr = Object.keys(pullLocalRest);
-        var i = 1;
+        let i = 1;
         keyArr.forEach(element => {
-            console.log(element);
             if (element !== "last") {
                 var nextId = element;
                 var nextRest = pullLocalRest[element].name;
@@ -116,8 +115,8 @@ var popRecipes = function () {
                 <div class="recipeContainer" id="recipieContainer">
                 
                 <a class="recipeButton btn uk-button uk-button-default" data-id=${nextId} href="#modal-center" uk-toggle>Recipe</a>
-                <div id="modal-center" class="uk-flex-top" uk-modal>
-                        <div id=${nextId} class="uk-responsive-width drop uk-modal-dialog uk-modal-body uk-margin-auto-vertical" uk-overflow-auto>
+                <div id="modal-center" class="uk-modal-full" uk-modal>
+                        <div id=${nextId} class="uk-modal-dialog uk-modal-dialog-blank uk-height-viewport recipeModal" uk-overflow-auto>
             
                             <button class="uk-modal-close-default" type="button" uk-close id="closeBtn"></button>
             
