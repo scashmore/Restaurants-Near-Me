@@ -10,12 +10,9 @@ var getRest = function (city) {
         }
     })
         .then(function (response) {
-            randomRest = "" + (Math.floor(Math.random() * 19));
             if (response.ok) {
                 response.json().then(function (rests) {
-                    console.log(rests);
-                    console.log(randomRest);
-                    console.log(rests.data[randomRest].address.formatted);
+                    randomRest = "" + (Math.floor(Math.random() * rests.data.length));
                     writeRest(rests, randomRest);
                 });
             }
@@ -70,11 +67,7 @@ var writeRest = function (rests, randomRest) {
 
 //reruns the randomizer
 $('#notGoingBtn').on('click', function (event) {
-    //clears result div before running script again
     window.location.reload();
-    // $('#result').empty();
-    // $('#menuPrint').empty();
-    // getRest(zip);
 })
 
 var pullLocal = JSON.parse(localStorage.getItem('visitedRestaurants')) || {};
@@ -85,17 +78,17 @@ $('#goingBtn').on('click', function (event) {
     var rest = $('#restName').text();
     var restId = $('#restId').attr("data-restID");
     console.log(pullLocal);
-        pullLocal[restId]= {
-            name: rest, 
-            comment: "",
-            rating: "",
-            latitude: lat,
-            longitude: long,
-        },
+    pullLocal[restId] = {
+        name: rest,
+        comment: "",
+        rating: "",
+        latitude: lat,
+        longitude: long,
+    },
         pullLocal.last = restId;
     localStorage.setItem('visitedRestaurants', JSON.stringify(pullLocal));
-});    
-    
+});
+
 
 //open maps
 
